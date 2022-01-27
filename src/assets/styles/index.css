@@ -1,6 +1,11 @@
 /*
 全局样式表
 */
+
+:root:root {
+  --adm-color-primary: #a062d4;
+  --adm-font-size-main: 16px;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
