@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './index.css'
 
 interface SvgIconProps {
@@ -23,4 +24,4 @@ const SvgIcon = ({ name, prefix = 'icon', color = '#333', ...props }: SvgIconPro
   }
 };
 
-export default SvgIcon
+export default memo(SvgIcon)

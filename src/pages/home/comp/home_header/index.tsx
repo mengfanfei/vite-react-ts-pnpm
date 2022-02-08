@@ -1,5 +1,5 @@
 import { Button } from "antd-mobile";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { MyContext, StoreContext } from "../..";
 
 
@@ -22,4 +22,4 @@ const HomeHeader = () => {
   );
 };
 
-export default HomeHeader;
+export default memo(HomeHeader);

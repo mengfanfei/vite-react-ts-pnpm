@@ -1,3 +1,5 @@
+import { memo } from "react"
+
 const MyHeader = () => {
   return (
     <div>
@@ -6,4 +8,4 @@ const MyHeader = () => {
   )
 }
 
-export default MyHeader
+export default memo(MyHeader)
