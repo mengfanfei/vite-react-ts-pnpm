@@ -1,6 +1,7 @@
-/*
-全局样式表
-*/
+/*全局样式表*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root:root {
   --adm-color-primary: #a062d4;
