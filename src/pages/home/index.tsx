@@ -2,8 +2,9 @@ import SvgIcon from '@/components/SvgIcon';
 import HomeHeader from '@/pages/home/comp/home_header'
 import { Dialog, Toast, ActionSheet, Button } from 'antd-mobile';
 import { Action } from 'antd-mobile/es/components/action-sheet';
-import { Context, createContext, Dispatch, useContext, useReducer, useState } from 'react';
+import { Context, createContext, Dispatch, useReducer, useState } from 'react';
 import { defaultState, IState, reducer, Actions } from './store';
+import Footer from './comp/footer'
 
 interface StyleContext {
   color: string
@@ -80,6 +81,7 @@ function Home() {
       <SvgIcon name="QQ" prefix="iconfont" style={{fontSize: '30px' }} />
       <span>{name}</span>
       <span onClick={() => setNum(num + 1)}>{num}</span>
+      <Footer></Footer>
     </div>
   );
 }

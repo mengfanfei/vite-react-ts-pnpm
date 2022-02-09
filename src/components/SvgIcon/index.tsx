@@ -8,7 +8,7 @@ interface SvgIconProps {
   [propsName: string]: any
 }
 
-const SvgIcon = ({ name, prefix = 'icon', color = '#333', ...props }: SvgIconProps) => {
+const SvgIcon = memo(({ name, prefix = 'icon', color = '#333', ...props }: SvgIconProps) => {
   const iconName = `#${prefix}-${name}` // svg名字
   const iconfontClass = `iconfont icon-${name}` // iconfont 类名
   if (prefix === 'icon') {
@@ -22,6 +22,6 @@ const SvgIcon = ({ name, prefix = 'icon', color = '#333', ...props }: SvgIconPro
       <i {...props} className={iconfontClass} aria-hidden="true" />
     )
   }
-};
+});
 
-export default memo(SvgIcon)
+export default SvgIcon

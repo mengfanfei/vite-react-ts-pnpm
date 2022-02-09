@@ -22,4 +22,4 @@ const HomeHeader = () => {
   );
 };
 
-export default memo(HomeHeader);
+export default HomeHeader;
