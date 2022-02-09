@@ -2,7 +2,7 @@ import SvgIcon from '@/components/SvgIcon';
 import HomeHeader from '@/pages/home/comp/home_header'
 import { Dialog, Toast, ActionSheet, Button } from 'antd-mobile';
 import { Action } from 'antd-mobile/es/components/action-sheet';
-import { Context, createContext, Dispatch, useReducer, useState } from 'react';
+import { Context, createContext, Dispatch, useMemo, useReducer, useState } from 'react';
 import { defaultState, IState, reducer, Actions } from './store';
 import Footer from './comp/footer'
 
@@ -45,6 +45,11 @@ function Home() {
 
   const [state, dispatch] = useReducer(reducer, defaultState)
 
+  const doublleNum = useMemo(() => {
+    console.log('hhh');
+    return num*2
+  }, [num])
+
 
   return (
     <div className='home'>
@@ -79,7 +84,8 @@ function Home() {
       <SvgIcon name="QQ" prefix="iconfont"/>
       <SvgIcon name="QQ" prefix="iconfont" style={{color: '#edaeda' }} />
       <SvgIcon name="QQ" prefix="iconfont" style={{fontSize: '30px' }} />
-      <span>{name}</span>
+      <span>{console.log(123)}{name}</span>
+      <div>{doublleNum}</div>
       <span onClick={() => setNum(num + 1)}>{num}</span>
       <Footer></Footer>
     </div>
