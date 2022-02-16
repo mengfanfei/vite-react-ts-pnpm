@@ -1,9 +1,9 @@
-import SvgIcon from '@/components/SvgIcon';
+import SvgIcon from '@/components/SvgIcon'
 import HomeHeader from '@/pages/home/comp/home_header'
-import { Dialog, Toast, ActionSheet, Button } from 'antd-mobile';
-import { Action } from 'antd-mobile/es/components/action-sheet';
-import { Context, createContext, Dispatch, useMemo, useReducer, useState } from 'react';
-import { defaultState, IState, reducer, Actions } from './store';
+import { ActionSheet, Button, Dialog, Toast } from 'antd-mobile'
+import { Action } from 'antd-mobile/es/components/action-sheet'
+import { Context, createContext, Dispatch, useMemo, useReducer, useState } from 'react'
+import { Actions, defaultState, IState, reducer } from './store'
 import Footer from './comp/footer'
 
 interface StyleContext {
@@ -11,7 +11,7 @@ interface StyleContext {
   fontSize?: number
 }
 
-export const MyContext: Context<StyleContext> = createContext({ color: '#111'})
+export const MyContext: Context<StyleContext> = createContext({color: '#111'})
 
 interface IStoreContext {
   state: IState
@@ -82,12 +82,12 @@ function Home() {
       <SvgIcon name="expand"/>
       <SvgIcon name="home-add" color="#8B81C3" style={{ width: '30px', height: '30px' }}/>
       <SvgIcon name="QQ" prefix="iconfont"/>
-      <SvgIcon name="QQ" prefix="iconfont" style={{color: '#edaeda' }} />
-      <SvgIcon name="QQ" prefix="iconfont" style={{fontSize: '30px' }} />
+      <SvgIcon name="QQ" prefix="iconfont" style={{color: '#edaeda'}} />
+      <SvgIcon name="QQ" prefix="iconfont" style={{fontSize: '30px'}} />
       <span>{console.log(123)}{name}</span>
       <div>{doublleNum}</div>
       <span onClick={() => setNum(num + 1)}>{num}</span>
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 }
